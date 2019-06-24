@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BT | Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3de667b782.js"></script>
+  </head>
+  <body>
+    <div class="container">
+          <main class="reg-form">
+            <form id="regForm" name="regForm">
+              <fieldset>
+                <legend>Please note: all fields are required</legend>
+                <div>
+                  <p>
+                    <label class="label" for="name">Fullname</label>
+                  </p>
+
+                  <p>
+                    <input class="input-el" id="name" name="name" placeholder="Full Name" type="text" value=""> <i aria-hidden="true" class="fa fa-check complete"></i> <small id="alert-name"></small>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <label class="label" for="email">Email</label>
+                  </p>
+
+                  <p>
+                    <input class="input-el" id="email" name="email" placeholder="Email ID" type="text" value=""> <i aria-hidden="true" class="fa fa-check complete"></i> <small id="alert-email"></small>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <label class="label" for="password">Password</label>
+                  </p>
+
+                  <p>
+                    <input class="input-el" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required="" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" type="password"> <i aria-hidden="true" class="fa fa-check complete"></i> <small id="alert-password"></small>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <label class="label" for="password-confirm">Confirm Password</label>
+                  </p>
+
+                  <p>
+                    <input class="input-el" id="password-confirm" name="password-confirm" type="password" value=" "> <i aria-hidden="true" class="fa fa-check complete"></i> <small id="alert-confirm-password"></small>
+                  </p>
+                </div>
+              </fieldset>
+
+              <div>
+                <button id="submit">Send</button>
+              </div>
+            </form>
+
+            <div id="message">
+              <h3>
+                Password must contain the following:
+              </h3>
+
+              <p class="invalid" id="letter">
+                A <b>lowercase</b> letter
+              </p>
+
+              <p class="invalid" id="capital">
+                A <b>capital (uppercase)</b> letter
+              </p>
+
+              <p class="invalid" id="number">
+                A <b>number</b>
+              </p>
+
+              <p class="invalid" id="length">
+                Minimum <b>8 characters</b>
+              </p>
+            </div>
+          </main>
+        </div>
+        <script src="./js/main.js"></script>
+  </body>
+</html>
